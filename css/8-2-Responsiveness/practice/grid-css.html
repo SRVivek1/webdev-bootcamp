@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        div {
+            min-height: 50px;
+            min-width: 50px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 100px 100px 100px;
+            gap: 30px;
+        }
+
+        .first {
+            background-color: blue;
+            grid-column: span 2;
+        }
+
+        .second {
+            background-color: red;
+            grid-row: span 2;
+        }
+        .third {
+            background-color: gray;
+        }
+        .fourth {
+            background-color: seagreen;
+        }
+        .fivth {
+            background-color: indianred;
+        }
+
+        .sixth {
+            background-color: blueviolet;
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+        <div class="fourth"></div>
+        <div class="fivth"></div>
+        <div class="sixth"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox CSS</title>
+
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            
+            height: 100px;
+            
+            position: relative;
+            top: 10px;
+        }
+        .card  {
+            height: 100px;
+            background-color: blue;
+            
+            flex: 1;
+            
+            margin-left: 20px;
+        }
+
+        .first {
+            flex: 2;
+        }
+
+        .third {
+            flex: 0.5;
+        }
+
+        .flex-container-col {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 50px;
+            min-height: 50px; /* Add height to make it visible */
+        }
+
+        .row {
+            width: 300px;
+            min-height: 50px;
+            background-color: blueviolet;
+            flex: 1;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="flex-container">
+    <div class="card first"></div>
+    <div class="card second"></div>
+    <div class="card third"></div>
+    <div class="card fourth"></div>
+</div>
+
+<div class="flex-container-col">
+    <div class="row firstr"></div>
+    <div class="row secondr"></div>
+    <div class="row thirdr"></div>
+    <div class="row fourthr"></div>
+</div>
+</body>
+</html>

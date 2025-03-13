@@ -1,0 +1,36 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 50px 50px 0px 50px;
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+    min-height: 95vh;
+}
+
+.main {
+    flex: 1;
+}
+h1 {
+    font-size: 5rem;
+}
+
+.creative {
+    color: brown;
+}
+
+.card {
+    width: 45%;
+}
+
+.card img {
+    width: 300px;
+    float: left;
+    margin-right: 30px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}

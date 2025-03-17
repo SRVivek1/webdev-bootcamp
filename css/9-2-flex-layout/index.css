@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    margin: 20px;
+}
+
+.container > h1 {
+    font-size: 4rem;
+    text-decoration: underline;
+    color: seagreen;
+}
+
+.box {
+    background-color: antiquewhite;
+    width: fit-content;
+    padding: 10px 20px 10px 0px;
+}
+
+.box > ul {
+    list-style-type: square;
+}
+
+a {
+    font-size: 1.5rem;
+}

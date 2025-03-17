@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Row layout</title>
+    <link rel="stylesheet" href="./flex-row.css" />
+
+    <!-- Load script after HTML is parsed -->
+    <script src="./flex-row.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box orange">
+            <p>Orange</p>
+        </div>
+        <div class="box yellow">
+            <p>Yellow</p>
+        </div>
+        <div class="box green">
+            <p>Green</p>
+        </div>
+        <div class="box blue">
+            <p>blue</p>
+        </div>
+        <div class="box indigo">
+            <p>Indigo</p>
+        </div>
+        <div class="box violet">
+            <p>Violet</p>
+        </div>
+    </div>
+
+    <div class="controls">
+        <div class="fcontainer-properties">
+            <!-- <h2>Flex Properties for container:</h2> -->
+            <div class="flex-direction">
+                <label for="flex-direction">flex-direction: </label>
+                <select id="flex-direction" name="flex-direction">
+                    <option value="row">row</option>
+                    <option value="row-reverse">row-reverse</option>
+                </select>
+            </div>
+
+            <div class="justify-content">
+                <label for="justify-content">justify-content: </label>
+                <select id="justify-content" name="justify-content">
+                    <option value="flex-start">flex-start</option>
+                    <option value="center">center</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="space-between">space-between</option>
+                    <option value="space-around">space-around</option>
+                    <option value="space-evenly">space-evenly</option>
+                </select>
+            </div>
+
+
+            <div class="align-items">
+                <label for="align-items">align-items: </label>
+                <select id="align-items" name="align-items">
+                    <option value="flex-start">flex-start</option>
+                    <option value="center">center</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="stretch">stretch</option>
+                    <option value="baseline">baseline</option>
+                </select>
+            </div>
+
+            <div class="align-content">
+                <label for="align-content">align-content:</label>
+                <select id="align-content" name="align-content">
+                    <option value="flex-start">flex-start</option>
+                    <option value="center">center</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="space-between">space-between</option>
+                    <option value="space-around">space-around</option>
+                    <option value="stretch">stretch</option>
+                </select>
+            </div>
+
+            <div class="flex-wrap">
+                <label for="flex-wrap">flex-wrap:</label>
+                <select id="flex-wrap" name="flex-wrap">
+                    <option value="nowrap">nowrap</option>
+                    <option value="wrap">wrap</option>
+                    <option value="wrap-reverse">wrap-reverse</option>
+                </select>
+            </div>
+
+            <div class="container-width">
+                <label for="container-width">Cont. Width: </label>
+                <input id="container-width-input" />
+                <label for="container-width">px</label>
+            </div>
+        </div>
+       
+        <div class="fcontainer-item-properties">
+            <!-- <h2>Flex Properties for container items:</h2> -->
+            <div class="flex-grow">
+                <label for="flex-grow">flex-grow:</label>
+                <select id="flex-grow" name="flex-grow">
+                    <option value="nowrap">nowrap</option>
+                    <option value="wrap">wrap</option>
+                    <option value="wrap-reverse">wrap-reverse</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="flex-property-desc">
+            <p>Description: <br/> <span id="fprop-desc"></span></p>
+        </div>
+    </div>
+</body>
+
+</html>

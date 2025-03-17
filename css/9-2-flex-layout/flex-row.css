@@ -1,0 +1,92 @@
+.container {
+    border: 4px solid red;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+ flex-basis: 100px;
+ color: white;
+ font-weight: 800;
+ height: 50px;
+ /* width: 200px; */
+}
+
+.box > p {
+    text-align: center;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
+.indigo {
+    background-color: indigo;
+}
+.violet {
+    background-color: violet;
+}
+
+
+.controls {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    justify-content: space-evenly;
+}
+
+.controls > div {
+    border: 2px solid red;
+}
+
+.fcontainer-item-properties, .fcontainer-properties {
+    width: 44%;
+}
+
+.flex-property-desc {
+    width: 15%;
+}
+
+.fcontainer-properties {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 50%;
+    justify-content: space-between;
+}
+
+.fcontainer-properties > div {
+    padding: 10px 10px;
+    min-height: 20px;
+}
+
+.fcontainer-properties > div label {
+    font-weight: 800;
+}
+
+.flex-property-desc > p {
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+#fprop-desc {
+    font-style: italic;
+    font-size: 1rem;
+    background-color: gold;
+}
+
+#container-width-input {
+    max-width: 95px;
+}

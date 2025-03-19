@@ -6,11 +6,10 @@
 }
 
 .box {
- flex-basis: 100px;
  color: white;
  font-weight: 800;
  height: 50px;
- /* width: 200px; */
+ flex-basis: 100px;
 }
 
 .box > p {
@@ -39,7 +38,7 @@
 
 
 .controls {
-    margin-top: 10px;
+    margin-top: 25px;
     display: flex;
     flex-direction: row;
     gap:20px;
@@ -58,20 +57,30 @@
     width: 15%;
 }
 
-.fcontainer-properties {
+.fcontainer-properties, .fcontainer-item-properties {
+    color: seagreen;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 50%;
     justify-content: space-between;
+    position: relative;
 }
 
-.fcontainer-properties > div {
+.fcontainer-properties > h2, .fcontainer-item-properties > h2 {
+    font-size: 1.3rem;
+    position: absolute;
+    top: -46px;
+    left: 20%;
+    order: 2;
+}
+
+.fcontainer-properties > div, .fcontainer-item-properties > div {
     padding: 10px 10px;
     min-height: 20px;
 }
 
-.fcontainer-properties > div label {
+.fcontainer-properties > div label, .fcontainer-item-properties > div label {
     font-weight: 800;
 }
 
@@ -89,4 +98,54 @@
 
 #container-width-input {
     max-width: 95px;
+}
+
+
+.notes {
+    margin-top: 40px;
+    min-height: 200px;
+    border: 2px solid green;
+}
+
+.notes > div {
+    margin-left: 15px;
+}
+
+.notes > h2 {
+    margin: 10px 0px 10px 10px;
+}
+
+.propTitle {
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+
+.notes-box * {
+    margin: 5px;
+}
+
+.notes-box {
+    border-left: 5px solid blue;
+    border-bottom: 1px solid #0000aa;
+    margin-bottom: 8px;
+    width: 98%;
+}
+
+.fp-keynotes > div {
+    margin-top: 10px;
+}
+
+.word-highlight {
+    color: blueviolet;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.flex-cp-note {
+    margin: 0px 0px 5px 10px;
+    border-left: 10px solid goldenrod;
+    font-style: italic;
+    font-weight: 600;
+    color: black;
 }

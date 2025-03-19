@@ -36,7 +36,7 @@
 
     <div class="controls">
         <div class="fcontainer-properties">
-            <!-- <h2>Flex Properties for container:</h2> -->
+            <h2>Flex Properties for container:</h2>
             <div class="flex-direction">
                 <label for="flex-direction">flex-direction: </label>
                 <select id="flex-direction" name="flex-direction">
@@ -96,21 +96,126 @@
                 <label for="container-width">px</label>
             </div>
         </div>
-       
+
         <div class="fcontainer-item-properties">
-            <!-- <h2>Flex Properties for container items:</h2> -->
+            <h2>Flex Properties for container items:</h2>
+
+
+            <div class="flex-basis">
+                <label for="flex-basis">flex-basis:</label>
+                <select id="flex-basis" name="flex-basis">
+                    <option value="100">100</option>
+                    <option value="150">150</option>
+                    <option value="200">200</option>
+                    <option value="250">250</option>
+                </select>
+                <label for="flex-basis">px.</label>
+            </div>
+
             <div class="flex-grow">
                 <label for="flex-grow">flex-grow:</label>
                 <select id="flex-grow" name="flex-grow">
-                    <option value="nowrap">nowrap</option>
-                    <option value="wrap">wrap</option>
-                    <option value="wrap-reverse">wrap-reverse</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
                 </select>
+            </div>
+
+            <div class="flex-shrink">
+                <label for="flex-shrink">flex-shrink:</label>
+                <select id="flex-shrink" name="flex-shrink">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            
+            <div class="flex-cp-note">
+                <p><span class="word-highlight">Note: </span> In this POC these properties are implemented only on first and last item present in the container. To see the differnce and easy understanding.</p>
             </div>
         </div>
 
         <div class="flex-property-desc">
-            <p>Description: <br/> <span id="fprop-desc"></span></p>
+            <p>Description: <br /> <span id="fprop-desc"></span></p>
+        </div>
+    </div>
+
+    <div class="notes">
+        <h2>Key Notes:</h2>
+        <div id="fp-keynotes" class="fp-keynotes">
+
+            <div class="notes-box" id="fbasis-p">
+                <p class="propTitle" id="fbasis-p-title">Flex Basis:</p>
+                <p id="fbasis-p-notes">
+                <ul>
+                    <li>
+                        <p>Specifies the <span class="word-highlight">initial value</span> of flex item before any available space is distributed.</p>
+                    </li>
+                    <li>
+                        <p>
+                            Values can be lengths <span class="word-highlight">(e.g. px, %, em) or auto</span>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span class="word-highlight">auto</span> means items height and width property is used.
+                        </p>
+                    </li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="notes-box" id="fgrow-p">
+                <p class="propTitle" id="fgrow-p-title">Flex Grow:</p>
+                <p id="fgrow-p-notes">
+                <ul>
+                    <li>
+                        <p>The flex-grow property defines how much a flex item should grow relative to other items when
+                            extra space is available in the flex container.</p>
+                    </li>
+                    <li>
+                        <p>When we apply <span class="word-highlight">flex-grow: 2</span> to the first item without
+                            specifying flex-grow for other items (or setting it to 0), the first item will take all the
+                            extra space.</p>
+                    </li>
+                    <li>
+                        <p>
+                            The formula for space distribution is: <span class="word-highlight">Available extra space *
+                                (Total flex-grow of all items / flex-grow of item)</span>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If we set <span class="word-highlight">flex-grow: 1;</span> to all items in fex container,
+                            the available free space will be equally distributed to all items to grow.
+                        </p>
+                    </li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="notes-box" id="fshrink-p">
+                <p class="propTitle" id="fshrink-p-title">Flex Shrink:</p>
+                <p id="fshrink-p-notes">
+                <ul>
+                    <li>
+                        <p>The flex-shrink property defines how much a flex item will shrink relative to other items
+                            when there is insufficient in the flex container.</p>
+                    </li>
+                    <li>
+                        <p>A value of 0 i.e. <span class="word-highlight">flex-shrink: 0;</span> prevents item from
+                            shrinking.</p>
+                    </li>
+                    <li>
+                        <p>A value of greater than 0 e.g. <span class="word-highlight">flex-shrink: 3;</span> allows the
+                            item to shrink, with higher values shrinking proportionally more.</p>
+                    </li>
+                </ul>
+                </p>
+            </div>
+
         </div>
     </div>
 </body>

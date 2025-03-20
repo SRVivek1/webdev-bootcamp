@@ -131,9 +131,42 @@
                     <option value="4">4</option>
                 </select>
             </div>
-            
+
+            <div class="flex-order">
+                <label for="flex-order">flex-order:</label>
+                <select id="flex-order" name="flex-order">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+
+            <div class="align-self">
+                <label for="align-self">align-self:</label>
+                <select id="align-self" name="align-self">
+                    <option value="auto">auto</option>
+                    <option value="flex-start">flex-start</option>
+                    <option value="center">center</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="baseline">baseline</option>
+                    <option value="stretch">stretch</option>
+                </select>
+            </div>
+
             <div class="flex-cp-note">
-                <p><span class="word-highlight">Note: </span> In this POC these properties are implemented only on first and last item present in the container. To see the differnce and easy understanding.</p>
+                <p>
+                    <span class="word-highlight">Note: </span>
+                    <br />
+                <ul>
+                    <li>In this POC these properties are implemented only on first and/or last item present in the container. To see the differnce and easy understanding.
+                    </li>
+                    <li style="color:red; font-weight: 800;">
+                        Flex shrink property is not working.
+                    </li>
+                </ul>
+                </p>
             </div>
         </div>
 
@@ -151,7 +184,8 @@
                 <p id="fbasis-p-notes">
                 <ul>
                     <li>
-                        <p>Specifies the <span class="word-highlight">initial value</span> of flex item before any available space is distributed.</p>
+                        <p>Specifies the <span class="word-highlight">initial value</span> of flex item before any
+                            available space is distributed.</p>
                     </li>
                     <li>
                         <p>

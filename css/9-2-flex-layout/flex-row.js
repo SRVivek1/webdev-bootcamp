@@ -182,12 +182,37 @@ const flexShrink = document.getElementById("flex-shrink");
 flexShrink.addEventListener("change", () => {
   // implement the style on very first and last item in flex container
   let t = document.getElementsByClassName("box");
-  t[t.length - 1].style.flexShrink = elem.value / 2;
-  t[0].style.flexShrink = elem.value;
+  t[t.length - 1].style.flexShrink = flexShrink.value / 2;
+  t[0].style.flexShrink = flexShrink.value;
 
   let msg =
     "Defines how much a flex item will shrink relative to other items when there is insufficient in the flex container.";
   updatePropDesc(msg);
 });
 
+
+// flex-order: Defines the 
+const flexOrder = document.getElementById("flex-order");
+const flexOrderChange = () => {
+  let t = document.getElementsByClassName("box");
+  t[0].style.order = flexOrder.value;
+  //t[t.length - 1].style.order = flexOrder / 2;
+  
+  let msg = "Defines the order of flex items inside the container. Lower value appears first, default is 0";
+  updatePropDesc(msg);
+}
+flexOrder.addEventListener("change", flexOrderChange);
+
+
 // align-self (Overrides align-items for Individual Items) - Allows an individual item to have a different vertical alignment.
+const flexAlignSelf = document.getElementById("align-self");
+const flexAlignSelfFunction = () => {
+  let t = document.getElementsByClassName("box");
+  t[0].style.alignSelf = flexAlignSelf.value;
+  t[t.length - 1].style.alignSelf = flexAlignSelf.value;
+
+  let msg = "Overrides align-items from the container. Works on the cross-axis (vertical in flex-direction: row). Default: auto (inherits from align-items of the parent).";
+
+  updatePropDesc(msg);
+}
+flexAlignSelf.addEventListener("change", flexAlignSelfFunction);

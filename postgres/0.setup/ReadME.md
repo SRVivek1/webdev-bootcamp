@@ -4,7 +4,7 @@
   - docker-compose -p test-postgres up -d
   
 ## Stop containers and network
-  - docker-compose down
+  - docker-compose -p test-postgres down
 
 
 ## List and find volumes created for postgres

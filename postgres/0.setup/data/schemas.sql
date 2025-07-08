@@ -60,9 +60,10 @@ VALUES ('Angela', 'teal'), ('Jack', 'powderblue');
 
 -- Visited countries
 CREATE TABLE visited_countries(
-id SERIAL PRIMARY KEY,
+id SERIAL,
 country_code CHAR(2) NOT NULL,
-user_id INTEGER REFERENCES users(id)
+user_id INTEGER REFERENCES users(id),
+PRIMARY KEY (country_code, user_id)
 );
 
 -- Data

@@ -25,6 +25,7 @@ app.get("/", async (req, res) => {
   res.render("index.ejs", { ...resp });
 });
 
+
 /**
  * Add new users and Show contries visitded by the user.
  */

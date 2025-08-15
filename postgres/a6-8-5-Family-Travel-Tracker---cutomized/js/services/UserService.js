@@ -42,10 +42,21 @@ const userService = {
     return await usersRepository.getUserById(userId);
   },
 
+  /**
+   * Add new user to the database.
+   * 
+   * @param {name} name 
+   * @param {color} color 
+   * @returns 
+   */
   addNewUser: async function (name, color) {
     return await usersRepository.addNewUser(name, color);
   },
 
+  /**
+   * Get visited countries by user id.
+   * @param {userId} userId 
+   */
   getVisitedCountriesByUserId: async function (userId) {
 
     const resp = new Response();

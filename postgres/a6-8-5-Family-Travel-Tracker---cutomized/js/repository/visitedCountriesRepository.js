@@ -2,7 +2,7 @@ import * as db from "./databae.js";
 
 const GET_C_CODE = "SELECT country_code FROM visited_countries";
 
-const GET_C_CODE_FOR_UID = "SELECT country_code FROM visited_countries WHERE user_id = $1";
+const GET_C_CODE_FOR_UID = "SELECT country_code FROM visited_countries v join users u on u.id = v.user_id WHERE v.user_id = $1";
 
 const ADD_NEW_ENTRY = "INSERT INTO visited_countries (country_code, user_id) VALUES ($1, $2)";
 
@@ -21,14 +21,14 @@ export async function getVisitedCountriesByUserId(user_id) {
 
   let result;
   if(user_id){
-    result = await db.query(GET_C_CODE_FOR_UID, [user_id.toLowerCase()]);
+    result = await db.query(GET_C_CODE_FOR_UID, [user_id]);
   } else {
     result = await db.query(GET_C_CODE);
   }
   
   console.debug("Visited Countries : " + JSON.stringify(result));
   
-  return result;
+  return result;  
 }
 
 

@@ -46,6 +46,7 @@ create table world_food (
 
 
 -- Users table
+-- One user can visit many countries
 CREATE TABLE users(
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(15) UNIQUE NOT NULL,
@@ -59,11 +60,11 @@ VALUES ('Angela', 'teal'), ('Jack', 'powderblue');
 
 
 -- Visited countries
+-- One country can be visited by many users
 CREATE TABLE visited_countries(
-id SERIAL,
+id SERIAL PRIMARY KEY,
 country_code CHAR(2) NOT NULL,
-user_id INTEGER REFERENCES users(id),
-PRIMARY KEY (country_code, user_id)
+user_id INTEGER REFERENCES users(id)
 );
 
 -- Data
@@ -72,3 +73,9 @@ VALUES ('FR', 1), ('GB', 1), ('CA', 2), ('FR', 2 );
 
 
 
+-- Join to show visited countries by users
+select * 
+from visited_countries vc
+join users u
+on u.id = vc.user_id
+;

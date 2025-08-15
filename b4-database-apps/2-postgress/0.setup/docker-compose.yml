@@ -1,30 +1,37 @@
+# Postgress DB and PGadmin docker installation.
+# 
+# Check OS confgig repo for latest version of this file.
+#
 services:
   postgres:
     image: postgres:latest
     container_name: postgres_db
-    ports:
-      - "5432:5432"
+    restart: unless-stopped
     environment:
       POSTGRES_USER: pguser
       POSTGRES_PASSWORD: passw0rd725
       POSTGRES_DB: pocdb
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
     volumes:
+      # Named volume
       - postgres_data:/var/lib/postgresql/data
-    restart: unless-stopped
 
   pgadmin:
     image: dpage/pgadmin4:latest
-    container_name: pgadmin_tool
-    ports:
-      - "9081:80"
+    container_name: pgadmin_ui
+    restart: unless-stopped
     environment:
-      PGADMIN_DEFAULT_EMAIL: no-reply@gmail.com
+      PGADMIN_DEFAULT_EMAIL: srvivek@gmail.com
       PGADMIN_DEFAULT_PASSWORD: passw0rd725
+    ports:
+      - "5080:80"
     volumes:
+      # Store pgAdmin config/data
       - pgadmin_data:/var/lib/pgadmin
     depends_on:
       - postgres
-    restart: unless-stopped
 
 volumes:
   postgres_data:
